@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Sean&#39;s blog">
 <meta property="og:description" content="最近在利用 Git + hexo 搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决问题一：执行hexo s 命令时，出现：1YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 33:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-23T08:31:17.954Z">
+<meta property="og:updated_time" content="2019-09-23T08:53:55.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用Git+Hexo 搭建你的博客">
 <meta name="twitter:description" content="最近在利用 Git + hexo 搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决问题一：执行hexo s 命令时，出现：1YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 33:">
@@ -175,6 +175,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="最近在利用-Git-hexo-搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决"><a href="#最近在利用-Git-hexo-搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决" class="headerlink" title="最近在利用 Git + hexo 搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决"></a>最近在利用 Git + hexo 搭建博客时，遇到了好多坑，经过不断尝试，最终一一解决</h3><h3 id="问题一：执行hexo-s-命令时，出现："><a href="#问题一：执行hexo-s-命令时，出现：" class="headerlink" title="问题一：执行hexo s 命令时，出现："></a>问题一：执行hexo s 命令时，出现：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 33:</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>解决方案：（1）出现这种情况，一般都是缺少空格，在:冒号之后要有空格！检查x行y列附近的冒号，其之后是否跟了空格。<br>（2）仔细检查_config.yml文件中所有冒号后面的空格，格式很严格，必须是只有一个，半角。不管是多了还是少了都会报错，这是yml解释器所定义的语法。如果不确定的话，将输入法调整到英文模式，删除所有冒号后面的空格重新输入，不要使用Tab。</p>
 <h3 id="问题二：使用Git上传文件的时候遇到如下报错："><a href="#问题二：使用Git上传文件的时候遇到如下报错：" class="headerlink" title="问题二：使用Git上传文件的时候遇到如下报错："></a>问题二：使用Git上传文件的时候遇到如下报错：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! [rejected] master -&gt; master (fetch first) error: failed to push some refs to <span class="string">' 。。。'</span></span><br></pre></td></tr></table></figure>
